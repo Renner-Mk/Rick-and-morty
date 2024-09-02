@@ -1,22 +1,118 @@
-#main-background > img{
-    width: 100%;
+#main{
+    position: relative;
+    background-image: url(../img/FUNDO_3.jpg);
+    /* background-attachment: fixed; */
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #main-background{
+    width: 100% ;
     padding: 0;
     margin: 0;
+    position:  relative;
+    z-index: -1;
+    top: -10px;
+} */
+
+#cards{
+    padding-bottom: 400px;
+}
+
+#cards > div > div:nth-child(2), #cards > div > div:nth-child(4){
+    display: flex;
+    justify-content: flex-end !important;
+}
+
+#cards > div > div:nth-child(2) > div, #cards > div > div:nth-child(4) > div{
+    width: 100%;
 }
 
 .header-title{
     font-weight: bold;
-    font-size: 50px;
+    font-size: 84px;
     color: rgb(0, 209, 0);
 }
 
 #svg{
-    width: 50px;
+    width: 60px;
     position: absolute;
-    top:10px;
-    left: 10px;
+    top: 10px;
+    left: 20px;
 }
-header{
-    position: relative;
+
+footer#footer{
+    /* height: 350px; */
+    background-color: rgb(4, 109, 4) !important;
+    color: rgb(0, 209, 0);
+}
+#iconSearchButton{
+    position: absolute;
+    right: 17px;
+    top: 5px;
+    /* transform: translateY(-2.5px); */
+}
+
+#prevButton, #nextButton{
+    width: fit-content;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(15, 150, 15);
+    color: black;
+    transition: 100ms ease-in;
+}
+.button:not(:disabled):hover{
+    scale: 1.2;
+    box-shadow: 2px 3px 5px gray;
+}
+
+#prevButton.disabled, #nextButton.disabled{
+    background-color: rgb(185, 185, 185);
+}
+
+.modal-content{
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.modal-header h2{
+    color: green;
+    font-weight: bold;
+    font-size: 3px;
+}
+
+.btn-close{
+    background-color: rgb(16, 139, 22);
+}
+
+.Alive{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(15, 184, 15);
+}
+
+.Dead{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(161, 20, 20);
+}
+
+.unknown{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(126, 126, 126);
+}
+
+.modal-body{
+    color: white;
+}
+
+.modal-body h3 {
+    color: #585858;
+    font-size: 18px;
 }
 

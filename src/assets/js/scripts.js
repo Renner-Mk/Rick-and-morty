@@ -90,12 +90,9 @@ async function setView() {
 function addCard(character, isFullWidth = false) {
   const card = document.createElement('div')
   card.classList.add(isFullWidth ? 'col-sm-12' : 'col-sm-6', 'mb-5')
-  card.setAttribute('data-bs-toggle', 'modal')
-  card.setAttribute('data-bs-target', '#infoCharacters')
-  card.setAttribute('data-id', character.id)
 
   card.innerHTML += `
-    <div class="card" style="max-width: 540px;">
+    <div class="card" data-bs-toggle="modal" data-id="${character.id}" data-bs-target="#infoCharacters" style="max-width: 540px;">
       <div class="row g-0">
           <div class="col-md-4">
           <img src="${character.image}" class="img-fluid rounded-start" alt="image of ${character.name}">
@@ -105,7 +102,7 @@ function addCard(character, isFullWidth = false) {
               <h5 class="card-title fs-1 mb-1 text-center">${character.name}</h5>
               <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
                   <div class="${character.status}"></div>
-                  <p class="m-0">${character.status} - ${character.species}</p>
+                  <p class="m-0 firstLetter">${character.status} - ${character.species}</p>
               </div>
           </div>
       </div>

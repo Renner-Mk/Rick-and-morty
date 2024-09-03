@@ -8,10 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./src/assets/css/styles.css">
+
+    <link rel="stylesheet" href="./src/assets/css/animation.css">
 </head>
 <body class="w-100 bg-black">
     <img id="svg" src="./src/assets/img/RICK_MORTY_ICON-01.svg">
-    <header class="container-fluid p-5 my-5 d-flex flex-column justify-content-center align-items-center">
+    <header class="container-fluid p-5 mt-5 d-flex flex-column justify-content-center align-items-center">
        <div>
             <div class="mt-5">
                 <h1 class="header-title">API DE RICK AND MORTY</h1>
@@ -40,121 +42,16 @@
        
     </header>
 
-
-    <main id="main" class="w-100 pt-5">
+    <main id="main" class="w-100 pt-5 position-relative">
         <div id="cards" class="container">
 
             <div id="cardsContainer" class="row d-flex justify-content-between">
 
-                <!-- <div class="col-sm-6 mb-5" data-bs-toggle="modal" data-bs-target="#infoCharacters">
-                    <div class="card" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                            <img src="https://rickandmortyapi.com/api/character/avatar/811.jpeg" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8 p-3 d-flex flex-column justify-content-center align-items-center">
-                                
-                                <h5 class="card-title fs-1 mb-1">Card title</h5>
-                                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
-                                    <div class="alive"></div>
-                                    <p class="m-0">Alive - Human</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 mb-5" data-bs-toggle="modal" data-bs-target="#infoCharacters">
-                    <div class="card" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                            <img src="https://rickandmortyapi.com/api/character/avatar/811.jpeg" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8 p-3 d-flex flex-column justify-content-center align-items-center">
-                                
-                                <h5 class="card-title fs-1 mb-1">Card title</h5>
-                                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
-                                    <div class="alive"></div>
-                                    <p class="m-0">Alive - Human</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 mb-5" data-bs-toggle="modal" data-bs-target="#infoCharacters">
-                    <div class="card" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                            <img src="https://rickandmortyapi.com/api/character/avatar/811.jpeg" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8 p-3 d-flex flex-column justify-content-center align-items-center">
-                                
-                                <h5 class="card-title fs-1 mb-1">Card title</h5>
-                                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
-                                    <div class="alive"></div>
-                                    <p class="m-0">Alive - Human</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 mb-5" data-bs-toggle="modal" data-bs-target="#infoCharacters">
-                    <div class="card" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                            <img src="https://rickandmortyapi.com/api/character/avatar/811.jpeg" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8 p-3 d-flex flex-column justify-content-center align-items-center">
-                                
-                                <h5 class="card-title fs-1 mb-1">Card title</h5>
-                                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
-                                    <div class="alive"></div>
-                                    <p class="m-0">Alive - Human</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 mb-5" data-bs-toggle="modal" data-bs-target="#infoCharacters">
-                    <div class="card" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                            <img src="https://rickandmortyapi.com/api/character/avatar/811.jpeg" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8 p-3 d-flex flex-column justify-content-center align-items-center">
-            
-                                <h5 class="card-title fs-1 mb-1">Card title</h5>
-                                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
-                                    <div class="alive"></div>
-                                    <p class="m-0">Alive - Human</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 mb-5" data-bs-toggle="modal" data-bs-target="#infoCharacters">
-                    <div class="card" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                            <img src="https://rickandmortyapi.com/api/character/avatar/811.jpeg" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8 p-3 d-flex flex-column justify-content-center align-items-center">
-            
-                                <h5 class="card-title fs-1 mb-1">Card title</h5>
-                                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
-                                    <div class="alive"></div>
-                                    <p class="m-0">Alive - Human</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
 
             </div>
 
+            
         </div>
-        
     </main>
 
     <!-- Modal -->
@@ -165,13 +62,13 @@
                 <h2 class="modal-title fs-5" id="infoCharactersLabel">Name Personagem</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body text-center">
+            <div class="modal-body text-center position-relative">
                 <div class="img-personagem mb-3">
-                    <img src="https://rickandmortyapi.com/api/character/avatar/811.jpeg" class="img-fluid rounded-start" alt="...">
+                    <img src="https://rickandmortyapi.com/api/character/avatar/811.jpeg" class="img-fluid rounded-3" alt="...">
                 </div>
                 <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
                     <div class="divStatus"></div>
-                    <p class="m-0"><span class="status">Alive</span> - <span class="species">Human</span></p>
+                    <p class="m-0"><span class="status firstLetter">Alive</span> - <span class="species">Human</span></p>
                 </div>
                 <div class="row mb-3">
                     <h3 class="m-0">Origem</h3>
@@ -210,6 +107,8 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/assets/js/api.js"></script>
     <script src="./src/assets/js/scripts.js"></script>
+
+    <script src="./src/assets/js/animation.js"></script>
 
 </body>
 </html>
